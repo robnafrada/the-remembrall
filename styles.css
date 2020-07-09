@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "hp";
+    src: url("../eyechooseu/assets/fonts/Amatic_SC/AmaticSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: "hp-bold";
+    src: url("../eyechooseu/assets/fonts/Amatic_SC/AmaticSC-Bold.ttf");
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: "hp";
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-family: "hp-bold";
+    text-align: center;
+}
+
+.info-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 1rem;
+    width: 125px;
+    height: 175px;
+    border: 1px solid #000;
+    background-color: #000;
+}
