@@ -2,13 +2,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../eyechooseu/styles.css">
+    <link rel="stylesheet" href="../theremembrall/styles.css">
     <script src="../eyechooseu/script.js"></script>
     <title>the remembrall</title>
 </head>
 <body>
     <section class="main">
         <h1 class="title">The Remembrall</h1>
+        <div class="overlay-text visible">
+            Click to Start
+        </div>
+        <div id="game-over-text" class="overlay-text">
+            I can't remember what I've forgotten...
+            <span class="overlay-text-small">Click to Restart</span>
+        </div>
+        <div id="victory-text" class="overlay-text">
+            I remember everything!
+            <span class="overlay-text-small">Click to Restart</span>
+        </div>
         <div class="info-container">
             <p class="time">Time <span>100</span></p>
             <p class="flips">Flips <span>0</span></p>
@@ -16,27 +27,118 @@
         <div class="card-container">
             <div class="card">
                 <div class="card-back card-face">
-
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
                 </div>
                 <div class="card-front card-face">
-
+                    <img class="front-image" src="../theremembrall/assets/images/hpscar.png" alt="">
                 </div>
             </div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/hpscar.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/elderwand.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/elderwand.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/hogwarts.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/hogwarts.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/hpwand.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/hpwand.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/map.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/map.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/shield.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/shield.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/snitch.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/snitch.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/sorting.png" alt="">
+                </div>
+            </div><div class="card">
+                <div class="card-back card-face">
+                    <img class="scar" src="../theremembrall/assets/images/scar.png" alt="">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image" src="../theremembrall/assets/images/sorting.png" alt="">
+                </div>
+            </div>
         </div>
     </section>
 </body>

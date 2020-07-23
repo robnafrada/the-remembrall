@@ -1,11 +1,11 @@
 @font-face {
     font-family: "hp";
-    src: url("../eyechooseu/assets/fonts/Amatic_SC/AmaticSC-Regular.ttf");
+    src: url("../theremembrall/assets/fonts/Amatic_SC/AmaticSC-Regular.ttf");
 }
 
 @font-face {
     font-family: "hp-bold";
-    src: url("../eyechooseu/assets/fonts/Amatic_SC/AmaticSC-Bold.ttf");
+    src: url("../theremembrall/assets/fonts/Amatic_SC/AmaticSC-Bold.ttf");
 }
 
 body {
@@ -18,6 +18,42 @@ body {
 .title {
     font-family: "hp-bold";
     text-align: center;
+    font-size: 3rem;
+}
+
+.overlay-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    z-index: 100;
+    display: none;
+    color: #e3a000;
+    font-family: "hp-bold";
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    } to {
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 10rem;
+    }
+}
+
+.overlay-text-small {
+    font-size: 3rem;
 }
 
 .info-container {
@@ -26,17 +62,102 @@ body {
     justify-content: space-around;
 }
 
+.time,
+.flips {
+    font-size: 2rem;
+}
+
 .card-container {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    perspective: 900px;
 }
 
 .card {
     margin: 1rem;
     width: 125px;
     height: 175px;
-    border: 1px solid #000;
-    background-color: #000;
+    background-color: #505050;
+    position: relative;
+    border-radius: 4px;
 }
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
+}
+
+.card.matched .front-image {
+    animation: dance 1s linear infinite 500ms;
+}
+
+@keyframes dance {
+    0%, 100% {
+        transform: rotate(0);
+    } 25% {
+        transform: rotate(-30deg);
+    } 75% {
+        transform: rotate(30deg);
+    }
+}
+
+.card-back {
+    background-color: #cbcbcb;
+    border: 4px solid #242424;
+    border-radius: 4px;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+    background-color: #e7e7e7;
+    border: 4px solid #e3a000;
+}
+
+.scar {
+    width: 100%;
+}
+
+.front-image {
+    width: 70%;
+    transition: all .2s ease-in-out;
+}
+
+.front-image:hover {
+    transform: scale(1.1);
+}
+
+.scar:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: 1s;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
