@@ -1,11 +1,11 @@
 @font-face {
     font-family: "hp";
-    src: url("../theremembrall/assets/fonts/Amatic_SC/AmaticSC-Regular.ttf");
+    src: url("./assets/fonts/Amatic_SC/AmaticSC-Regular.ttf");
 }
 
 @font-face {
     font-family: "hp-bold";
-    src: url("../theremembrall/assets/fonts/Amatic_SC/AmaticSC-Bold.ttf");
+    src: url("./assets/fonts/Amatic_SC/AmaticSC-Bold.ttf");
 }
 
 body {
